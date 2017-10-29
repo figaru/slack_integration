@@ -1,0 +1,21 @@
+<template name="slack">
+    
+    {{> loginButtons}}
+    
+    <h1>slack integration</h1>
+
+
+    {{#if integrated}}
+        <p>You are integrated with slack.</p>
+        <button id="revoke">Revoke</button>
+
+        <!-- {{#each channels}}
+            <p>{{this.name}} <b>{{this.id}}</b></p>
+        {{else}}
+            <p>Could not retrieve any channels</p>
+        {{/each}} -->
+    {{else}}    
+        <button id="integrate">Integrate Slack</button>
+        <!--<a href="https://slack.com/oauth/authorize?&client_id=19059556229.261166404151&scope=incoming-webhook,identity.basic,bot,chat:write:bot"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>-->
+    {{/if}}
+</template>
